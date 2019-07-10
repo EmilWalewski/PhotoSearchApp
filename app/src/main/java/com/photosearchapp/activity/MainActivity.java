@@ -104,10 +104,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void search(View view){
 
-
-//        request = "https://www.googleapis.com/customsearch/v1?q="+editText.getText().toString()
-//                +"&cx=000605677260126996711:zhriqhqpzfs&searchType=image&key=AIzaSyCC-np4W9mxYyRldHm4otXoq8nVcd_FVHs";
-
         request = "https://api.flickr.com/services/rest/?method=flickr.photos.search" +
                 "&format=json&nojsoncallback=1&api_key=72a6e739f61f7cdacce5a93ab44ad69d&tags="+editText.getText().toString();
 
@@ -135,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
                 try {
 
                     jsonArray = response.getJSONObject("photos").getJSONArray("photo");
-                    //jsonArray = response.getJSONArray("items");
 
                     for(int i = 0; i < jsonArray.length(); i++)
                         imageJSONArray.put(jsonArray.getJSONObject(i));
@@ -145,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                 } catch (JSONException e) {
-                    System.out.println("blad");
                 }
             }
 
@@ -172,7 +166,6 @@ public class MainActivity extends AppCompatActivity {
                 jsonObject.accumulate("title", imageJSONArray.getJSONObject(i).getString("title"));
 
                 Photo new_image = new Photo(jsonObject);
-                //Photo new_image = new Photo(imageJSONArray.getJSONObject(i));
                 images.add(new_image);
             }
         } catch (JSONException je) { }
