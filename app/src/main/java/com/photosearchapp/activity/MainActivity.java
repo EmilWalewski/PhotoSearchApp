@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
     public void search(View view){
 
         request = "https://api.flickr.com/services/rest/?method=flickr.photos.search" +
-                "&format=json&nojsoncallback=1&api_key=72a6e739f61f7cdacce5a93ab44ad69d&tags="+editText.getText().toString();
+                "&format=json&nojsoncallback=1&api_key=72a6e739f61f7cdacce5a93ab44ad69d&text="+editText.getText().toString();
 
 
         imageJSONArray = new JSONArray();
