@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PhotoSearchApp</string>
+    <string name="app_search_button">Search</string>
+</resources>
