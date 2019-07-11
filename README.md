@@ -7,4 +7,6 @@ Used librarys:
 - Picasso 2.5.2
 - AsyncHttpClient 1.4.9
 - RecyclerView 1.0.0
+
+Used API:
 - Flickr API
